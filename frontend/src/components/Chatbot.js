@@ -74,7 +74,7 @@ const Chatbot = () => {
               </div>
             ) : (
               <div key={index} className="chat-message bot-message">
-                <p><strong>Bot Response:</strong> {message.text}</p>
+                {/* <p><strong>Bot Response:</strong> {message.text}</p> */}
                 {message.query && (
                   <>
                     <p><strong>SQL Query:</strong> {message.query}</p>
