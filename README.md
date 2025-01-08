@@ -50,3 +50,5 @@ DB_PORT=5432
 #### start the frontend : npm start
 ## Screenshots
 ![alt text](image-2.png)
+## Video Demo
+<video controls src="Health Tracker - Google Chrome 2025-01-08 22-42-48.mp4" title="working demo"></video>
