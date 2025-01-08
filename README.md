@@ -49,4 +49,4 @@ DB_PORT=5432
 #### Start the backend server : uvicorn app:app --reload
 #### start the frontend : npm start
 ## Screenshots
-![alt text](image.png)
+![alt text](image-1.png)
