@@ -70,7 +70,7 @@ const Chatbot = () => {
           {chatHistory.map((message, index) =>
             message.sender === 'user' ? (
               <div key={index} className="chat-message user-message">
-                <p><strong>User Question:</strong> {message.text}</p>
+                <p><strong>User Query:</strong> {message.text}</p>
               </div>
             ) : (
               <div key={index} className="chat-message bot-message">
