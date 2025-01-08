@@ -15,7 +15,6 @@ The queries are executed against a PostgreSQL database and results are returned 
 #### Table Metadata Sidebar: 
 View table names and columns from the connected database.
 ## Prerequisites
-#### Table Metadata Sidebar: 
 Before setting up the project, make sure you have the following installed:
 
 React (for frontend)
