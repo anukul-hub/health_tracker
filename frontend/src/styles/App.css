@@ -1,3 +1,5 @@
+
+/* App Component CSS */
 .app {
   display: flex;
   height: 100vh;
@@ -27,30 +29,22 @@
   padding: 20px;
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .app {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .sidebar-container {
-      flex: 0 0 auto;
-      width: 100%;
-      height: auto;
-      border-right: none;
-      border-bottom: 1px solid #3b3b40;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #3b3b40;
   }
 
   .chat-container {
-      width: 100%;
-  }
-
-  .chatbox {
-      flex-direction: column;
-      gap: 5px;
-  }
-
-  .chatbox button {
-      width: 100%;
+    width: 100%;
   }
 }
 
