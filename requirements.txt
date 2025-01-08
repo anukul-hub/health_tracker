@@ -1,0 +1,16 @@
+# SQLAlchemy==2.0.0
+# psycopg2-binary==2.9.7
+# fastapi
+# uvicorn
+# openai  # or the SDK for the Generative AI model you'll use
+# sqlmodel  # ORM compatible with FastAPI
+# python-dotenv  # For managing environment variables
+
+fastapi
+sqlalchemy
+psycopg2
+uvicorn
+numpy
+faker
+python-dotenv
+# faiss-cpu  # or weaviate-client if you choose Weaviate

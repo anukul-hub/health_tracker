@@ -1,0 +1,128 @@
+.app {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  background-color: #202123; /* Dark background */
+  color: #ececf1; /* Light text color */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.sidebar-container {
+  flex: 0 0 300px; /* Fixed width for sidebar */
+  background-color: #2c2d31; /* Sidebar background */
+  padding: 20px;
+  border-right: 1px solid #3b3b40; /* Subtle border */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #343541; /* Chat area background */
+  padding: 20px;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .app {
+      flex-direction: column;
+  }
+
+  .sidebar-container {
+      flex: 0 0 auto;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid #3b3b40;
+  }
+
+  .chat-container {
+      width: 100%;
+  }
+
+  .chatbox {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .chatbox button {
+      width: 100%;
+  }
+}
+
+
+/* .app {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.sidebar-container {
+  width: 300px;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-right: 1px solid #ddd;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.chat-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  height: 100vh;
+}
+
+.messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fbfbfb;
+} */
+
+/* App.css
+.app {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+  }
+  
+  .sidebar-container {
+    width: 25%;
+    padding: 20px;
+    background-color: #fff;
+    border-right: 2px solid #ddd;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-container {
+    width: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #fff;
+  }
+  
+  .messages {
+    margin-top: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    height: 70%;
+  }
+   */
