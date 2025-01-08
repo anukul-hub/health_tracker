@@ -1,4 +1,4 @@
-Health Fitness Tracker is a web application that allows users to interact with their health data through an intuitive chatbot interface. The app uses a backend powered by FastAPI to dynamically generate SQL queries and fetch results from a PostgreSQL database.
+**Health Tracker** is a web application that allows users to interact with their health data through an intuitive chatbot interface. The app uses a backend powered by FastAPI to dynamically generate SQL queries and fetch results from a PostgreSQL database.
 
 **Features**
 
