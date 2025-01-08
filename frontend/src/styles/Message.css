@@ -1,4 +1,4 @@
-
+/* 
 .messages {
   flex-grow: 1;
   overflow-y: auto;
@@ -28,7 +28,7 @@
   color: #ececf1;
   align-self: flex-start;
   text-align: left;
-}
+} */
 
 @media (max-width: 768px) {
   .chatbox input {
