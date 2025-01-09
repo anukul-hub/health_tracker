@@ -49,6 +49,6 @@ DB_PORT=5432
 #### Start the backend server : uvicorn app:app --reload
 #### start the frontend : npm start
 ## Screenshots
-![alt text](image-2.png)
+![alt text](image-3.png)
 ## Video Demo
 <video controls src="Health Tracker - Google Chrome 2025-01-08 22-42-48.mp4" title="working demo"></video>
