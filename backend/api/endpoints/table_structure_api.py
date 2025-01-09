@@ -1,6 +1,5 @@
-
 from fastapi import APIRouter, HTTPException
-import psycopg2
+import asyncpg
 from dotenv import load_dotenv
 import os
 
@@ -16,32 +15,32 @@ async def get_table_structure():
     Returns table names and their columns.
     """
     try:
-        conn = psycopg2.connect(
-            dbname=os.getenv("DB_NAME"),
+        # Connect to the PostgreSQL database asynchronously
+        conn = await asyncpg.connect(
+            database=os.getenv("DB_NAME"),
             user=os.getenv("DB_USER"),
             password=os.getenv("DB_PASSWORD"),
             host=os.getenv("DB_HOST"),
             port=os.getenv("DB_PORT")
         )
-        cursor = conn.cursor()
 
-        cursor.execute("""
+        # Fetch all table names
+        tables = await conn.fetch("""
             SELECT table_name 
             FROM information_schema.tables 
             WHERE table_schema = 'public';
         """)
-        tables = cursor.fetchall()
 
+        # Fetch column details for each table
         table_structure = []
-        for table_name in tables:
-            table_name = table_name[0]
-            cursor.execute(f"""
+        for table in tables:
+            table_name = table["table_name"]
+            columns = await conn.fetch(f"""
                 SELECT column_name 
                 FROM information_schema.columns 
-                WHERE table_name = '{table_name}';
-            """)
-            columns = cursor.fetchall()
-            column_names = [column[0] for column in columns]
+                WHERE table_name = $1;
+            """, table_name)
+            column_names = [column["column_name"] for column in columns]
             table_structure.append({
                 "name": table_name,
                 "columns": column_names
@@ -52,5 +51,4 @@ async def get_table_structure():
         raise HTTPException(status_code=500, detail=f"Error fetching table structure: {str(e)}")
     finally:
         if conn:
-            conn.close()
-
+            await conn.close()
