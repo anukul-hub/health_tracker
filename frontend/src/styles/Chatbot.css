@@ -64,10 +64,21 @@
   color: #ececf1;
   font-size: 16px;
   outline: none;
+  width: 30%;
 }
 
 .chatbox input::placeholder {
   color: #a1a1aa;
+  text-align: center;
+}
+
+.chat-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space as needed */
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto; /* Center the form horizontally */
 }
 
 .chatbox button {
