@@ -95,7 +95,7 @@ const Chatbot = () => {
             className="chat-input"
             aria-label="Chat input"
           />
-          <button type="submit" className="send-btn" disabled={loading}>
+          <button type="submit" className="send-btn" disabled={loading || !userInput.trim()}>
             {loading ? 'Sending...' : 'Send'}
           </button>
         </form>
